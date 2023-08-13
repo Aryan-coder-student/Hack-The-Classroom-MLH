@@ -1,0 +1,30 @@
+{% extends 'lesson.html' %}
+{% block body %}
+<div class="container">
+    {% for info in n_h %}
+    <div class="card my-2">
+        <div class="card-header text-center">
+        </div>
+        <div class="card-body">
+            <form class="row g-3">
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label"><u><strong>By</u>: </strong>{{user.first_name}} {{user.last_name}}</label>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label"> <u><strong>Title</u> : </strong>{{info.notice_title}}</label>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label"> <u><strong>For classes</u> : </strong>{% for class in info.send_to_student.all %}@{{class}} {% endfor %}</label>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label"><u><strong>Notice : </u></strong></label>
+                    <div class="input-group">
+                        <label for="inputAddress" class="form-label">{{info.notice_text}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}

@@ -1,0 +1,22 @@
+{% extends 'lesson.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row my-2">
+        {% for info in chapter_list %}
+        <div class="col-3">
+            <div class="card text-center" style="width: 18rem;">
+                <img src= "{{info.lesson_thumbnail.url}}" class="card-img-top" style="height:180px;width:286px">
+                <div class="card-body">
+                    <h5 class="card-title"><u><b>{{info.lesson_name}}</b></u></h5>
+                    <textarea id="w3review" name="w3review" rows="1" cols="25" style= "resize:none"disabled>@{{info.lesson_tags}} {% for class in info.grade_for.all %}@{{class}} {% endfor %}</textarea>
+                    <button class="btn btn-dark mx-2 my-2" disabled>Enter Class</button>
+                    <button class="btn btn-danger" disabled>End Class</button>
+                    <div class="card-footer text-body-secondary">{{ info.lesson_date }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}

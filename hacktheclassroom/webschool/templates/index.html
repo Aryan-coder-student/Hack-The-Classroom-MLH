@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Webschool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar text-bg-dark ">
+        <div class="container-fluid ">
+            <a href = {% url 'index' %}>
+                <h4 class = "h4 text-light ">
+                <u>Webschool</u>
+                </h4>
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row text-center " style = "margin-top:60px;padding-left:140px">
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS5nNvQoGwOQe80aC-6hXWNKjt_3mV5AoUxw" class="card-img-top" style = "height:197px" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Portal</h5>
+                        <p class="card-text">Ask your login credentials from school teacher</p>
+                        <a href={% url 'login_student' %} class="btn btn btn-outline-dark">Login as Student</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThQ435S_KukRUfLHSKOVH06sc7Yjc0K2TSYQ" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Teacher Portal</h5>
+                        <p class="card-text">Ask your login credentials from school authorities</p>
+                        <a href={% url 'login_teacher' %} class="btn btn btn-outline-dark">Login as Teacher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

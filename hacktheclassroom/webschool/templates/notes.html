@@ -1,0 +1,252 @@
+{% extends 'lesson.html' %}
+{% block body %}
+<div class="container">
+    <div class="card my-2">
+        <div class="card-header text-center">
+            <strong>Notes</strong> 
+        </div>
+        <div class="card-body">
+            <form class="row g-3" method = "post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label"><strong>Chapter Name</strong></label>
+                    <input type="text" class="form-control" name = "c_name" id="inputEmail4" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label"> <strong>Title</strong></label>
+                    <input type="text" class="form-control" name = "c_title" id="inputPassword4" required>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label"><strong>Note PDF</strong></label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile02" name = "c_pdf" accept="application/pdf">
+                        <label class="input-group-text" for="inputGroupFile02"  required>Upload</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 my-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 1"type="checkbox" id="inlineCheckbox1" value="1A">
+                            <label class="form-check-label" for="inlineCheckbox1">1A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 2" type="checkbox" id="inlineCheckbox1" value="1B">
+                            <label class="form-check-label" for="inlineCheckbox1">1B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 3" type="checkbox" id="inlineCheckbox1" value="1C">
+                            <label class="form-check-label" for="inlineCheckbox1">1C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 4" type="checkbox" id="inlineCheckbox1" value="1D">
+                            <label class="form-check-label" for="inlineCheckbox1">1D</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 5" type="checkbox" id="inlineCheckbox1" value="2A">
+                            <label class="form-check-label" for="inlineCheckbox1">2A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 6" type="checkbox" id="inlineCheckbox1" value="2B">
+                            <label class="form-check-label" for="inlineCheckbox1">2B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 7" type="checkbox" id="inlineCheckbox1" value="2C">
+                            <label class="form-check-label" for="inlineCheckbox1">2C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 8" type="checkbox" id="inlineCheckbox1" value="2D">
+                            <label class="form-check-label" for="inlineCheckbox1">2D</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 45" type="checkbox" id="inlineCheckbox1" value="12SCIA">
+                            <label class="form-check-label" for="inlineCheckbox1">12SCIA</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 46" type="checkbox" id="inlineCheckbox1" value="12SCIB">
+                            <label class="form-check-label" for="inlineCheckbox1">12SCIB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 47" type="checkbox" id="inlineCheckbox1" value="12COMA">
+                            <label class="form-check-label" for="inlineCheckbox1">12COMA</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 48" type="checkbox" id="inlineCheckbox1" value="12COMB">
+                            <label class="form-check-label" for="inlineCheckbox1">12COMB</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 my-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 9" type="checkbox" id="inlineCheckbox1" value="3A">
+                            <label class="form-check-label" for="inlineCheckbox1">3A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 10" type="checkbox" id="inlineCheckbox1" value="3B">
+                            <label class="form-check-label" for="inlineCheckbox1">3B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 11" type="checkbox" id="inlineCheckbox1" value="3C">
+                            <label class="form-check-label" for="inlineCheckbox1">3C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 12" type="checkbox" id="inlineCheckbox1" value="3D">
+                            <label class="form-check-label" for="inlineCheckbox1">3D</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 13" type="checkbox" id="inlineCheckbox1" value="4A">
+                            <label class="form-check-label" for="inlineCheckbox1">4A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 14" type="checkbox" id="inlineCheckbox1" value="4B">
+                            <label class="form-check-label" for="inlineCheckbox1">4B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 15" type="checkbox" id="inlineCheckbox1" value="4C">
+                            <label class="form-check-label" for="inlineCheckbox1">4C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 16" type="checkbox" id="inlineCheckbox1" value="4D">
+                            <label class="form-check-label" for="inlineCheckbox1">4D</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 41" type="checkbox" id="inlineCheckbox1" value="11SCIA">
+                            <label class="form-check-label" for="inlineCheckbox1">11SCIA</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 42" type="checkbox" id="inlineCheckbox1" value="11SCIB">
+                            <label class="form-check-label" for="inlineCheckbox1">11SCIB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 43" type="checkbox" id="inlineCheckbox1" value="11COMA">
+                            <label class="form-check-label" for="inlineCheckbox1">11COMA</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 44" type="checkbox" id="inlineCheckbox1" value="11COMB">
+                            <label class="form-check-label" for="inlineCheckbox1">11COMB</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 17" type="checkbox" id="inlineCheckbox1" value="5A">
+                            <label class="form-check-label" for="inlineCheckbox1">5A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 18" type="checkbox" id="inlineCheckbox1" value="5B">
+                            <label class="form-check-label" for="inlineCheckbox1">5B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 19" type="checkbox" id="inlineCheckbox1" value="5C">
+                            <label class="form-check-label" for="inlineCheckbox1">5C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 20" type="checkbox" id="inlineCheckbox1" value="5D">
+                            <label class="form-check-label" for="inlineCheckbox1">5D</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 21" type="checkbox" id="inlineCheckbox1" value="6A">
+                            <label class="form-check-label" for="inlineCheckbox1">6A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 22" type="checkbox" id="inlineCheckbox1" value="6B">
+                            <label class="form-check-label" for="inlineCheckbox1">6B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 23" type="checkbox" id="inlineCheckbox1" value="6C">
+                            <label class="form-check-label" for="inlineCheckbox1">6C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 24" type="checkbox" id="inlineCheckbox1" value="6D">
+                            <label class="form-check-label" for="inlineCheckbox1">6D</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 my-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 25" type="checkbox" id="inlineCheckbox1" value="7A">
+                            <label class="form-check-label" for="inlineCheckbox1">7A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 26" type="checkbox" id="inlineCheckbox1" value="7B">
+                            <label class="form-check-label" for="inlineCheckbox1">7B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 27" type="checkbox" id="inlineCheckbox1" value="7C">
+                            <label class="form-check-label" for="inlineCheckbox1">7C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 28" type="checkbox" id="inlineCheckbox1" value="7D">
+                            <label class="form-check-label" for="inlineCheckbox1">7D</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 29" type="checkbox" id="inlineCheckbox1" value="8A">
+                            <label class="form-check-label" for="inlineCheckbox1">8A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 30" type="checkbox" id="inlineCheckbox1" value="8B">
+                            <label class="form-check-label" for="inlineCheckbox1">8B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 31" type="checkbox" id="inlineCheckbox1" value="8C">
+                            <label class="form-check-label" for="inlineCheckbox1">8C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 32" type="checkbox" id="inlineCheckbox1" value="8D">
+                            <label class="form-check-label" for="inlineCheckbox1">8D</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 my-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 33" type="checkbox" id="inlineCheckbox1" value="9A">
+                            <label class="form-check-label" for="inlineCheckbox1">9A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 34" type="checkbox" id="inlineCheckbox1" value="9B">
+                            <label class="form-check-label" for="inlineCheckbox1">9B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 35" type="checkbox" id="inlineCheckbox1" value="9C">
+                            <label class="form-check-label" for="inlineCheckbox1">9C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 36" type="checkbox" id="inlineCheckbox1" value="9D">
+                            <label class="form-check-label" for="inlineCheckbox1">9D</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 37" type="checkbox" id="inlineCheckbox1" value="10A">
+                            <label class="form-check-label" for="inlineCheckbox1">10A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 38" type="checkbox" id="inlineCheckbox1" value="10B">
+                            <label class="form-check-label" for="inlineCheckbox1">10B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 39" type="checkbox" id="inlineCheckbox1" value="10C">
+                            <label class="form-check-label" for="inlineCheckbox1">10C</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name = "check 40" type="checkbox" id="inlineCheckbox1" value="10D">
+                            <label class="form-check-label" for="inlineCheckbox1">10D</label>
+                        </div>
+                        
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mx-0">Create & Send</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
