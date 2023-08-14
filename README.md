@@ -1,1 +1,1 @@
-# Hackclassroom2
+# Hack-The-Classroom-MLH
